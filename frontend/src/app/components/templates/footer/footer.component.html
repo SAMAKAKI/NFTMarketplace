@@ -1,0 +1,40 @@
+<div class="w-full bg-zinc-700">
+  <div class="container mx-auto px-[6.25%]">
+    <div class="flex justify-between items-start pt-10 text-xl text-zinc-400">
+      <div class="2xl:w-[25%] xl:w-[30%] lg:w-[30%]">
+        <div class="flex items-center">
+          <img src="/assets/images/Creepy-Ice-Cream.png" alt="Logo" width="50px" height="50px">
+          <h1 class="2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-white">NFT Marketplace</h1>
+        </div>
+        <p class="my-5">NFT marketplace UI created with Anima for Figma.</p>
+        <p>Join our community</p>
+        <div class="2xl:text-3xl xl:text-3xl lg:text-2xl mt-2 flex gap-4">
+          <a href="#" class="transition-colors hover:text-white"><fa-icon [icon]="faDiscord"></fa-icon></a>
+          <a href="#" class="transition-colors hover:text-white"><fa-icon [icon]="faYoutube"></fa-icon></a>
+          <a href="#" class="transition-colors hover:text-white"><fa-icon [icon]="faTwitter"></fa-icon></a>
+          <a href="#" class="transition-colors hover:text-white"><fa-icon [icon]="faInstagram"></fa-icon></a>
+        </div>
+      </div>
+      <div class="w-[15%]">
+        <p class="2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-white">Explore</p>
+        <div>
+          <a routerLink="marketplace" class="mt-5 block transition-colors hover:text-white">Marketplace</a>
+          <a routerLink="rankings" class="mt-5 block transition-colors hover:text-white">Rankings</a>
+          <a routerLink="connet-wallet" class="mt-5 block transition-colors hover:text-white">Connect a wallet</a>
+        </div>
+      </div>
+      <div class="w-[35%]">
+        <p class="2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-white">Join Out Weekly Digest</p>
+        <p class="my-5 w-[90%]">Get exclusive promotions & updates straight to your inbox.</p>
+        <form class="relative">
+          <input type="email" placeholder="Enter your email here" class="text-zinc-900 placeholder-zinc-900 py-3 px-4 rounded-2xl 2xl:text-lg xl:text-base lg:text-sm 2xl:w-[90%] xl:w-full lg:w-full focus:outline-none">
+          <button class="absolute 2xl:right-10 xl:right-0 lg:right-0 2xl:text-lg xl:text-base lg:text-sm font-semibold 2xl:px-6 xl:px-6 lg:px-4 py-3 rounded-2xl bg-purple-500 text-white transition">
+            <fa-icon [icon]="faEnvelope" class="me-3"></fa-icon>Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+    <hr class="h-px bg-zinc-400 border-0 my-8">
+    <p class="text-zinc-400 text-lg">&copy; NFT Market. Author SAMAKAKI created in 2023</p>
+  </div>
+</div>
