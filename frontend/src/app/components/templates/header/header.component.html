@@ -1,16 +1,29 @@
 <div class="container mx-auto px-4">
-  <div class="flex justify-between items-center text-white pt-3">
+  <div class="flex justify-between items-center text-white pt-3 relative">
     <a href="/">
       <div class="flex items-center">
-        <img src="/assets/images/Creepy-Ice-Cream.png" alt="Logo" width="50px" height="50px">
-        <h1 class="text-2xl font-semibold">NFT Marketplace</h1>
+        <img src="/assets/images/Creepy-Ice-Cream.png" alt="Logo" class="2xl:w-[50px] xl:w-[50px] lg:w-[50px] md:w-[30px] sm:w-[25px] xs:w-[25px] 2xl:h-[50px] xl:h-[50px] lg:h-[50px] md:h-[30px] sm:h-[25px] xs:h-[25px]">
+        <h1 class="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl xs:text-lg font-semibold">NFT Marketplace</h1>
       </div>
     </a>
-    <div class="flex items-center font-semibold gap-10">
-      <a routerLink="marketplace" class="header-link-anime">Marketplace</a>
-      <a routerLink="rankings" class="header-link-anime">Rankings</a>
-      <a routerLink="connect-wallet" class="header-link-anime">Connect a wallet</a>
-      <a routerLink="sign-up" class="text-lg bg-purple-500 px-4 py-2 rounded-2xl shadow-lg transition-shadow hover:shadow-purple-700"><fa-icon [icon]="faUser" class="me-2 font-normal"></fa-icon>Sign Up</a>
+    <div class="2xl:flex xl:flex lg:flex md:hidden sm:hidden xs:hidden items-center font-semibold gap-10">
+      <a routerLink="/marketplace" class="header-link-anime">Marketplace</a>
+      <a routerLink="/rankings" class="header-link-anime">Rankings</a>
+      <a routerLink="/connect-wallet" class="header-link-anime">Connect a wallet</a>
+      <a routerLink="/sign-up" class="text-lg bg-purple-500 px-4 py-2 rounded-2xl shadow-lg transition-shadow hover:shadow-purple-700"><fa-icon [icon]="faUser" class="me-2 font-normal"></fa-icon>Sign Up</a>
+    </div>
+    <button class="2xl:hidden xl:hidden lg:hidden md:block sm:block xs:block h-7 w-7 relative" (click)="open = !open">
+      <div class="absolute w-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <span class="block absolute h-0.5 w-full bg-white transform transition duration-200 ease-in-out" [ngClass]="{'rotate-45': open,'-translate-y-1.5': !open}"></span>
+        <span class="block absolute h-0.5 w-5 bg-white transform transition duration-200 ease-in-out" [ngClass]="{'opacity-0': open}"></span>
+        <span class="block absolute h-0.5 w-full bg-white transform transition duration-200 ease-in-out" [ngClass]="{'-rotate-45': open,'translate-y-1.5': !open}"></span>
+      </div>
+    </button>
+    <div class="2xl:hidden xl:hidden lg:hidden md:flex sm:flex xs:flex flex-col gap-3 p-4 absolute w-full h-[180px] bg-zinc-800 top-14 rounded-b-2xl" *ngIf="open" [@dropDownMenu]>
+      <a routerLink="/marketplace" class="header-link-anime font-semibold w-[95px] menu-item">Marketplace</a>
+      <a routerLink="/rankings" class="header-link-anime font-semibold w-[72px] menu-item">Rankings</a>
+      <a routerLink="/connect-wallet" class="header-link-anime font-semibold w-[126px] menu-item">Connect a wallet</a>
+      <a routerLink="/sign-up" class="text-base w-[102px] bg-purple-500 px-3 py-1.5 rounded-2xl shadow-lg transition-shadow hover:shadow-purple-700 menu-item"><fa-icon [icon]="faUser" class="me-2 font-normal"></fa-icon>Sign Up</a>
     </div>
   </div>
 </div>
